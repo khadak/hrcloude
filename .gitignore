@@ -1,7 +1,5 @@
 .idea
 
-# Ignore the build directory
-build
 
 # Ignore cache
 /.sass-cache
