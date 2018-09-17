@@ -1,0 +1,45 @@
+body {
+  font-family: $base-font;
+  line-height: 1.3;
+  font-size: 12px;
+  background: $brand-color;
+  display: flex;
+  flex-direction: column;
+}
+h1 {
+  color: $brand-text-color;
+  font-size: $heading-font;
+  font-weight: normal;
+  margin: 0 0  22px;
+}
+.wrap {
+  max-width: 1280px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.wrap__add-btn {
+  text-align: right;
+  padding: 20px 0;
+}
+.hero-content {
+  text-align: center;
+  padding-top: 90px;
+}
+.js-hidden {
+  display: none;
+}
+.input__error {
+  color: #FF4500;
+  margin-top: 5px;
+  font-size: $error-font;
+}
+.input__note {
+  color: #fff;
+}
+#main-content {
+  background: #141a30 url("../images/bg-image.png") no-repeat;
+  background-size: cover;
+  @include retina('../images/bg-image.png', 3, cover, center center no-repeat);
+  flex: 1;
+  overflow: auto;
+}

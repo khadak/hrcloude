@@ -1,0 +1,459 @@
+*,
+*:before,
+*:after {
+  text-rendering: optimizeLegibility; }
+
+*:focus {
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+
+html,
+body,
+ul,
+ol, h1, h2, h3 {
+  margin: 0;
+  padding: 0; }
+
+::-webkit-input-placeholder {
+  color: gray; }
+
+:-ms-input-placeholder {
+  color: gray; }
+
+::-ms-input-placeholder {
+  color: gray; }
+
+::placeholder {
+  color: gray; }
+
+nav ol {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+input[type=number],
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0; }
+
+/**
+ * Allows you to use retina images at various pixel densities.
+ * Examples:
+ *
+ *   @include retina(/images/mypic.jpg, 2);
+ *   @include retina(/images/mypic.jpg, 3, 100px 100px, left top no-repeat transparent);
+ *
+ * @param  {Value}  $path               The path to the file name minus extension.
+ * @param  {Number} $cap:    2          The highest pixel density level images exist for.
+ * @param  {Value}  $size:   auto auto  The intended width of the rendered image.
+ * @param  {Value}  $extras: null       Any other `background` values to be added.
+ */
+
+body {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.3;
+  font-size: 12px;
+  background: #192038;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+h1 {
+  color: #fff;
+  font-size: 29px;
+  font-weight: normal;
+  margin: 0 0  22px; }
+
+.wrap {
+  max-width: 1280px;
+  padding: 0 20px;
+  margin: 0 auto; }
+
+.wrap__add-btn {
+  text-align: right;
+  padding: 20px 0; }
+
+.hero-content {
+  text-align: center;
+  padding-top: 90px; }
+
+.js-hidden {
+  display: none; }
+
+.input__error {
+  color: #FF4500;
+  margin-top: 5px;
+  font-size: 11px; }
+
+.input__note {
+  color: #fff; }
+
+#main-content {
+  background: #141a30 url("../images/bg-image.png") no-repeat;
+  background-size: cover;
+  /*
+   * Set a counter and get the length of the image path.
+   */
+  /*
+   * Loop ver the image path and figure out the
+   * position of the dot where the extension begins.
+   */
+  /*
+   * If we were able to figure out where the extension is,
+   * slice the path into a base and an extension. Use that to
+   * calculate urls for different density environments. Set
+   * values for different environments.
+   */
+  /*
+     * Set a base background for 1x environments.
+     */
+  background: url("../images/bg-image.png") center center no-repeat;
+  background-size: cover;
+  /*
+     * Create an @2x-ish media query.
+     */
+  /*
+     * Create media queries for all environments that the user has
+     * provided images for.
+     */
+  /*
+     * If anything went wrong trying to separate the file from its
+     * extension, set a background value without doing anything to it.
+     */
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  overflow: auto; }
+
+.btn {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  background-image: -webkit-gradient(linear, right top, left top, from(#8899ff), to(#5269ff));
+  background-image: -webkit-linear-gradient(right, #8899ff, #5269ff);
+  background-image: -o-linear-gradient(right, #8899ff, #5269ff);
+  background-image: linear-gradient(to left, #8899ff, #5269ff);
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out; }
+  .btn:before {
+    border-radius: inherit;
+    background-image: -webkit-gradient(linear, right top, left top, from(#5269ff), to(#8899ff));
+    background-image: -webkit-linear-gradient(right, #5269ff, #8899ff);
+    background-image: -o-linear-gradient(right, #5269ff, #8899ff);
+    background-image: linear-gradient(to left, #5269ff, #8899ff);
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: -1;
+    -webkit-transition: opacity 500ms ease-in-out;
+    -o-transition: opacity 500ms ease-in-out;
+    transition: opacity 500ms ease-in-out; }
+  .btn:hover:before {
+    opacity: 1; }
+  .btn.btn--big {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    margin: 0 0 20px; }
+
+.profile {
+  -webkit-animation: slide-in 0.4s ease;
+          animation: slide-in 0.4s ease; }
+
+@-webkit-keyframes slide-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0); } }
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0); } }
+
+#header {
+  background: #192038;
+  color: #fff;
+  height: 54px; }
+  #header #logo a {
+    color: #fff;
+    display: block; }
+    #header #logo a:before {
+      content: "";
+      display: inline-block;
+      background: url("../images/menu.svg") no-repeat 0 0;
+      width: 15px;
+      height: 12px;
+      vertical-align: middle;
+      margin-right: 15px; }
+  #header .header__wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  #header .user li {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 20px; }
+  #header .user__thumb {
+    background: url("../images/user.png") no-repeat 0 0;
+    width: 26px;
+    height: 26px; }
+  #header .user__notification {
+    background: url("../images/notification.svg") no-repeat 0 0;
+    width: 16px;
+    height: 20px; }
+  #header .user__message {
+    background: url("../images/message.svg") no-repeat 0 0;
+    width: 20px;
+    height: 13px; }
+
+.profile-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.profile {
+  background: #192038;
+  margin: 0 0 20px;
+  border-radius: 4px;
+  width: 190px;
+  max-height: 305px;
+  overflow: hidden;
+  color: #fff; }
+  .profile__pic {
+    margin: -9px;
+    line-height: 0; }
+  .profile__details {
+    position: relative;
+    padding: 15px;
+    -webkit-transition: all 300ms linear;
+    -o-transition: all 300ms linear;
+    transition: all 300ms linear; }
+  .profile__edit {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: url("../images/edit.svg") no-repeat 0 0;
+    width: 16px;
+    height: 16px; }
+  .profile__name {
+    font-size: 14px;
+    padding: 0 0 5px; }
+  .profile__designation {
+    color: #575c72;
+    padding: 0 0 10px; }
+  .profile__tax-details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin: 0 -15px -15px;
+    padding: 8px;
+    text-align: center;
+    background: rgba(255, 206, 204, 0.24);
+    opacity: 0;
+    -webkit-transition: all 300ms linear;
+    -o-transition: all 300ms linear;
+    transition: all 300ms linear; }
+    .profile__tax-details:after {
+      content: "";
+      width: 1px;
+      background: rgba(255, 255, 255, 0.28);
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 50%; }
+  .profile__tax-income {
+    width: 50%;
+    padding: 0 0 1px; }
+    .profile__tax-income:after {
+      content: "TAXABLE INCOME";
+      font-size: 8px;
+      display: block;
+      text-transform: uppercase; }
+  .profile__tax-payable {
+    width: 50%; }
+    .profile__tax-payable:after {
+      content: "TAX PAYABLE";
+      font-size: 8px;
+      display: block;
+      text-transform: uppercase; }
+  .profile:hover {
+    background-image: -webkit-gradient(linear, right top, left top, from(#fc855f), to(#fa629c));
+    background-image: -webkit-linear-gradient(right, #fc855f, #fa629c);
+    background-image: -o-linear-gradient(right, #fc855f, #fa629c);
+    background-image: linear-gradient(to left, #fc855f, #fa629c); }
+    .profile:hover .profile {
+      -webkit-transition: all 300ms linear;
+      -o-transition: all 300ms linear;
+      transition: all 300ms linear; }
+      .profile:hover .profile__edit {
+        display: block; }
+      .profile:hover .profile__designation {
+        color: #fff; }
+      .profile:hover .profile__details {
+        background-image: -webkit-gradient(linear, right top, left top, from(#fc855f), to(#fa629c));
+        background-image: -webkit-linear-gradient(right, #fc855f, #fa629c);
+        background-image: -o-linear-gradient(right, #fc855f, #fa629c);
+        background-image: linear-gradient(to left, #fc855f, #fa629c);
+        -webkit-transform: translateY(-43px);
+            -ms-transform: translateY(-43px);
+                transform: translateY(-43px);
+        -webkit-transition: all 300ms linear;
+        -o-transition: all 300ms linear;
+        transition: all 300ms linear;
+        will-change: transform; }
+      .profile:hover .profile__tax-details {
+        opacity: 1;
+        -webkit-transition: all 300ms linear;
+        -o-transition: all 300ms linear;
+        transition: all 300ms linear; }
+
+.employee-cart {
+  position: fixed;
+  z-index: 10;
+  right: 0;
+  top: 54px;
+  background: #13192b;
+  width: 348px;
+  padding: 30px;
+  height: 100%;
+  overflow: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transform: translateX(348px);
+      -ms-transform: translateX(348px);
+          transform: translateX(348px);
+  -webkit-transition: -webkit-transform 300ms linear;
+  transition: -webkit-transform 300ms linear;
+  -o-transition: transform 300ms linear;
+  transition: transform 300ms linear;
+  transition: transform 300ms linear, -webkit-transform 300ms linear; }
+  .employee-cart.transition {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    -webkit-transition: all 300ms linear;
+    -o-transition: all 300ms linear;
+    transition: all 300ms linear;
+    will-change: transform; }
+
+.input-wrap {
+  padding: 0 0 26px; }
+  .input-wrap label {
+    color: #575c72;
+    text-transform: uppercase;
+    padding: 0 0 8px;
+    display: block; }
+  .input-wrap .input {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border-radius: 4px;
+    border: solid 1px transparent;
+    background-color: #222842;
+    font-size: 16px;
+    color: #fff;
+    padding: 15px 20px; }
+    .input-wrap .input:disabled {
+      background: #0a0e19; }
+    .input-wrap .input:focus {
+      border-color: #7082ff; }
+
+.close-icon {
+  text-align: right;
+  cursor: pointer; }
+  .close-icon:after {
+    content: "";
+    display: inline-block;
+    background: url("../images/close.svg") no-repeat 0 0;
+    width: 20px;
+    height: 20px; }
+  @media only screen and (min-width: 1280px) {
+  .wrap {
+    min-width: 1280px; }
+  .profile-wrap {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 30px 82px; } }
+  @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+    #main-content {
+      background: url("../images/bg-image@2x.png") center center no-repeat;
+      background-size: cover; } }
+  @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 192dpi) {
+    #main-content {
+      background: url("../images/bg-image@2x.png") center center no-repeat;
+      background-size: cover; } }
+  @media (-webkit-min-device-pixel-ratio: 3), (-o-min-device-pixel-ratio: 3/1), (min-resolution: 288dpi) {
+    #main-content {
+      background: url("../images/bg-image@3x.png") center center no-repeat;
+      background-size: cover; } }

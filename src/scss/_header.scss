@@ -1,0 +1,49 @@
+#header {
+  background: $brand-color;
+  color: $brand-text-color;
+  height: 54px;
+  #logo {
+    a {
+      color: $brand-text-color;
+      display: block;
+      &:before {
+        content: "";
+        display: inline-block;
+        background: url("../images/menu.svg") no-repeat 0 0;
+        width: 15px;
+        height: 12px;
+        vertical-align: middle;
+        margin-right: 15px;
+      }
+    }
+  }
+  .header__wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+  }
+  .user {
+    li {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 20px;
+    }
+    &__thumb {
+      background: url("../images/user.png") no-repeat 0 0;
+      width: 26px;
+      height: 26px;
+    }
+    &__notification {
+      background: url("../images/notification.svg") no-repeat 0 0;
+      width: 16px;
+      height: 20px;
+    }
+    &__message {
+      background: url("../images/message.svg") no-repeat 0 0;
+      width: 20px;
+      height: 13px;
+    }
+  }
+}

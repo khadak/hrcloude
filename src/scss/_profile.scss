@@ -1,0 +1,104 @@
+.profile-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  justify-content: space-between;
+}
+.profile {
+  background: #192038;
+  margin: 0 0 20px;
+  border-radius: 4px;
+  width: 190px;
+  max-height: 305px;
+  overflow: hidden;
+  color: #fff;
+  &__pic {
+    margin: -9px;
+    line-height: 0;
+  }
+  &__details {
+    position: relative;
+    padding: 15px;
+    transition: all 300ms linear;
+  }
+  &__edit {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: url("../images/edit.svg") no-repeat 0 0;
+    width: 16px;
+    height: 16px;
+  }
+  &__name {
+    font-size: 14px;
+    padding: 0 0 5px;
+  }
+  &__designation {
+    color: #575c72;
+    padding: 0 0 10px;
+  }
+  &__tax-details {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 -15px -15px;
+    padding: 8px;
+    text-align: center;
+    background: rgba(255,206,204,.24);
+    opacity: 0;
+    transition: all 300ms linear;
+    &:after {
+      content: "";
+      width: 1px;
+      background: rgba(255, 255, 255, 0.28);
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 50%;
+    }
+  }
+  &__tax-income {
+    width: 50%;
+    padding: 0 0 1px;
+    &:after {
+      content: "TAXABLE INCOME";
+      font-size: 8px;
+      display: block;
+      text-transform: uppercase;
+    }
+  }
+  &__tax-payable {
+    width: 50%;
+    &:after {
+      content: "TAX PAYABLE";
+      font-size: 8px;
+      display: block;
+      text-transform: uppercase;
+    }
+  }
+  &:hover {
+    background-image: linear-gradient(to left, #fc855f, #fa629c);
+    .profile {
+      transition: all 300ms linear;
+      &__edit {
+        display: block;
+      }
+      &__designation {
+        color: #fff;
+      }
+      &__details {
+        background-image: linear-gradient(to left, #fc855f, #fa629c);
+        transform: translateY(-43px);
+        transition: all 300ms linear;
+        will-change: transform;
+      }
+      &__tax-details {
+        opacity: 1;
+        transition: all 300ms linear;
+      }
+    }
+  }
+}

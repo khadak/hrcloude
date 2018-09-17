@@ -1,0 +1,99 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>HR Cloud</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+<![endif]-->
+<header id="header">
+    <div class="wrap header__wrap">
+        <div id="logo">
+            <a href="#">HR CLOUD</a>
+        </div>
+        <nav id="top-nav">
+            <ol class="user">
+                <li class="user__thumb"></li>
+                <li class="user__notification"></li>
+                <li class="user__message"></li>
+            </ol>
+        </nav>
+    </div>
+</header>
+<div id="main-content">
+    <div class="wrap">
+        <div id="addEmpButton" class="hero-content js-hidden">
+            <h1>No Employees added yet</h1>
+            <button onclick="_showEmpInput()" class="btn">ADD EMPLOYEE</button>
+        </div>
+
+        <div id="employeeInput" class="employee-cart">
+            <div id="closeIcon" onclick="_hideEmployeeCart()" class="close-icon"></div>
+            <div class="input-wrap">
+                <label>FULL NAME</label>
+                <input type="text" class="input" id="fName" oninput="_nameValidate()" onchange="_nameValidate()">
+                <div id="nameValidate" class="input__error" style="display: none">Please enter your full name</div>
+            </div>
+            <div class="input-wrap">
+                <label>EMAIL ID</label>
+                <input type="email" class="input" id="eId" oninput="_emailValidate()" onchange="_emailValidate()">
+                <div id="emailValidate" class="input__error" style="display: none">Please enter your email id</div>
+            </div>
+            <div class="input-wrap">
+                <label>GROSS SALARY</label>
+                <input type="number" oninput="_calculateTax()" onchange="_calculateTax()" class="input" id="gSalary">
+                <div id="salaryValidate" class="input__error" style="display: none">Please enter your gross salary</div>
+            </div>
+            <div class="input-wrap">
+                <label>INVESTMENT</label>
+                <input oninput="_calculateTax()" onchange="_calculateTax()" maxlength="6" type="number" class="input" id="investment">
+                <div id="investmentValidation" class="input__error"></div>
+            </div>
+            <div class="input-wrap">
+                <label>TAXABLE INCOME</label>
+                <input type="text" class="input" id="tIncome" disabled>
+            </div>
+            <div class="input-wrap">
+                <label>TAX PAYABLE</label>
+                <input type="text" class="input" id="tPayable" disabled>
+            </div>
+            <div class="input-wrap">
+                <button type="submit" onclick="_submitEmpData()" class="btn btn--big">Submit</button>
+            </div>
+        </div>
+
+        <div id="addEmployee" class="wrap__add-btn js-hidden"  class="js-hidden">
+            <button class="btn" onclick="_showEmpInput()">ADD EMPLOYEE</button>
+        </div>
+
+        <div id="employeDetails" class="profile-wrap"></div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/main.js"></script>
+<script>
+    WebFontConfig = {
+        google: { families: [ 'Montserrat' ]
+        }
+    };
+    (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+            '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+    })();
+</script>
+</body>
+</html>
