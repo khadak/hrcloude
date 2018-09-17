@@ -163,13 +163,13 @@ function _calculateTax() {
         else if (isFirstTaxSlab) {
             tIncome.value = taxableIncome;
             totalTaxAmt = Math.round(taxableIncome * 0.05);
-            tPayable.value.value = totalTaxAmt;
+            tPayable.value = totalTaxAmt;
 
         }
         else if (isSecondTaxSlab) {
             tIncome.value = taxableIncome;
             totalTaxAmt = Math.round(taxableIncome * 0.2);
-            tPayable.value.value = totalTaxAmt;
+            tPayable.value = totalTaxAmt;
         }
         else if (isLastTaxSlab) {
             tIncome.value = taxableIncome;
